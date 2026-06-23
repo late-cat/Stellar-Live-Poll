@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #030305;
+  --surface-color: rgba(255, 255, 255, 0.03);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --primary-text: #ffffff;
+  --secondary-text: #a1a1aa;
+  
+  --yes-color: #10b981;
+  --yes-glow: rgba(16, 185, 129, 0.4);
+  --yes-gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  
+  --no-color: #f43f5e;
+  --no-glow: rgba(244, 63, 94, 0.4);
+  --no-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+  
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
