@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="demo/img/hero-demo.png" alt="Stellar Live Poll Hero" width="800" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 20px;" />
+  <img src="demo/img/hero-demo.png" alt="Stellar Live Poll Hero" width="100%" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 20px;" />
   
   <h1 align="center">Stellar Live Poll</h1>
   
@@ -42,13 +42,13 @@ This project serves as a comprehensive submission for the Stellar White Belt cha
 ## Visual Walkthrough
 
 ### Connecting Wallet
-<img src="demo/img/connect-wallet.png" alt="Connect Wallet" width="600" />
+<img src="demo/img/connect-wallet.png" alt="Connect Wallet" width="100%" />
 
-### Casting a Vote
-<img src="demo/img/results.png" alt="Cast Vote and Results" width="600" />
+### Casting a Vote and Recent Activity
+<img src="demo/img/recent_activity.png" alt="Cast Vote and Activity" width="100%" />
 
 ### On-Chain Transaction Success
-<img src="demo/img/transaction-success.png" alt="Transaction Success Explorer" width="600" />
+<img src="demo/img/transaction-success.png" alt="Transaction Success Explorer" width="100%" />
 
 ## Architecture Overview
 
