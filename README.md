@@ -41,10 +41,6 @@ This project serves as a comprehensive submission for the Stellar White Belt cha
 
 ## Visual Walkthrough
 
-<details>
-<summary><b>Click to expand screenshots</b></summary>
-<br>
-
 ### Connecting Wallet
 <img src="demo/img/connect-wallet.png" alt="Connect Wallet" width="600" />
 
@@ -53,8 +49,6 @@ This project serves as a comprehensive submission for the Stellar White Belt cha
 
 ### On-Chain Transaction Success
 <img src="demo/img/transaction-success.png" alt="Transaction Success Explorer" width="600" />
-
-</details>
 
 ## Architecture Overview
 
