@@ -77,7 +77,6 @@ export default function Home() {
       setResults(newResults);
       helper.getRecentVotes().then(setRecentVotes);
     } catch (e: any) {
-      // console.error(e); // Removed so Next.js doesn't show the dev error overlay
       let errorMsg = e.message || "An unknown error occurred.";
       if (errorMsg.includes("Already voted") || errorMsg.includes("You have already voted!")) {
         errorMsg = "You have already voted!";

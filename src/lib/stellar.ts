@@ -99,7 +99,6 @@ export class StellarHelper {
             txHash: event.txHash
           });
         } catch (e) {
-          // Ignore parsing errors for individual events
         }
       }
       return votes.reverse();
