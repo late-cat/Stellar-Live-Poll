@@ -8,7 +8,7 @@
   </p>
 
   <p align="center">
-    🚀 <a href="https://stellar-live-poll-six.vercel.app/"><strong>VIEW LIVE DEMO</strong></a> 🚀<br><br>
+    <a href="https://stellar-live-poll-six.vercel.app/"><strong>Live Demo</strong></a><br><br>
     <a href="#challenge-requirements-fulfilled">White Belt Challenge Submission</a> •
     <a href="#smart-contract-information">View Contract</a> •
     <a href="#local-setup-instructions">Get Started</a>
