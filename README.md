@@ -65,6 +65,7 @@ The live poll is driven by a decentralized smart contract on the test network:
 | :--- | :--- |
 | **Network** | Stellar Testnet |
 | **Contract Address** | `CBUJH3VFKIKCAKJYIMEUWI4QOPSOBGUC6NESL7K6U6K7PGHTO323HYRS` |
+| **Transaction Hash** | [`252b30fc115ad1d130d164fe4e7be41ce9c03921596ece35c6ddfacc38c44287`](https://stellar.expert/explorer/testnet/tx/252b30fc115ad1d130d164fe4e7be41ce9c03921596ece35c6ddfacc38c44287) |
 | **Environment** | Soroban Environment |
 
 ## Project Structure
