@@ -128,9 +128,9 @@ export default function Home() {
         <footer className="footer">
           <p>© {new Date().getFullYear()} SorobanPoll. Built on the Stellar Network.</p>
           <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
-            <a href="#" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Documentation</a>
-            <a href="#" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Source Code</a>
-            <a href="#" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Testnet Explorer</a>
+            <a href="https://developers.stellar.org/docs/smart-contracts" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Documentation</a>
+            <a href="https://github.com/late-cat/Stellar-Live-Poll" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Source Code</a>
+            <a href="https://stellar.expert/explorer/testnet/contract/CDLCLCOYFQC2DXGHWGCST4FWQOANS3QBXPSC3P2Q3D4JXWCEC7HTF7KP" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}>Testnet Explorer</a>
           </div>
         </footer>
 
