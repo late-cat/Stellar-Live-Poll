@@ -21,7 +21,7 @@ export function Hero() {
         <span className="hero-badge" style={{ boxShadow: '0 0 20px rgba(255,255,255,0.1)' }}>On-Chain Governance</span>
         <h1 className="hero-title" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.3em' }}>
           <span>The Future of Finance is</span>
-          <span style={{ position: 'relative', display: 'inline-block', minWidth: '220px', textAlign: 'left' }}>
+          <span style={{ position: 'relative', display: 'inline-block', minWidth: '220px', height: '1.2em', textAlign: 'left' }}>
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
