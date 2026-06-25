@@ -22,8 +22,10 @@ export function ActivityFeed({ recentVotes }: ActivityFeedProps) {
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} 
               style={{ textAlign: 'center', padding: '3rem', color: 'var(--secondary-text)', border: '1px dashed var(--surface-border)', borderRadius: '16px' }}
             >
-              <Loader2 size={32} className="icon-spin" style={{ margin: '0 auto 1rem', opacity: 0.5 }} />
-              Listening for network events...
+              <History size={32} style={{ margin: '0 auto 1rem', opacity: 0.5 }} />
+              <p style={{ fontSize: '1.125rem', fontWeight: 500, color: 'var(--primary-text)', marginBottom: '0.5rem' }}>No recent votes found</p>
+              <p style={{ fontSize: '0.875rem', opacity: 0.8 }}>Testnet nodes only retain events for the last few hours.</p>
+              <p style={{ fontSize: '0.875rem', opacity: 0.8, marginTop: '0.5rem' }}>Older votes are still safely counted in the total above.</p>
             </motion.div>
           ) : (
             recentVotes.map((vote, idx) => (

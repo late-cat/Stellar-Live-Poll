@@ -1,7 +1,8 @@
 :root {
-  --bg-color: #030305;
-  --surface-color: rgba(255, 255, 255, 0.03);
-  --surface-border: rgba(255, 255, 255, 0.08);
+  --bg-color: #020204;
+  --surface-color: rgba(255, 255, 255, 0.02);
+  --surface-border: rgba(255, 255, 255, 0.06);
+  --surface-highlight: rgba(255, 255, 255, 0.12);
   --primary-text: #ffffff;
   --secondary-text: #a1a1aa;
   
@@ -23,16 +24,16 @@
 }
 
 body {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-color);
-  background-image: 
-    radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.06), transparent 30%),
-    radial-gradient(circle at 85% 60%, rgba(244, 63, 94, 0.06), transparent 30%);
-  background-attachment: fixed;
   color: var(--primary-text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+h1, h2, h3, .nav-brand, .label-value, .history-title {
+  font-family: var(--font-space), sans-serif;
 }
 
 .ambient-light {
@@ -41,9 +42,20 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.03) 0%, transparent 60%);
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(52, 211, 153, 0.08), transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(244, 63, 94, 0.08), transparent 50%);
+  filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  animation: mesh-movement 20s ease-in-out infinite alternate;
+}
+
+@keyframes mesh-movement {
+  0% { transform: scale(1) translateY(0) rotate(0deg); }
+  50% { transform: scale(1.1) translateY(-20px) rotate(2deg); }
+  100% { transform: scale(0.9) translateY(20px) rotate(-2deg); }
 }
 
 /* Navbar */
@@ -57,9 +69,10 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 50;
-  background: rgba(3, 3, 5, 0.7);
-  backdrop-filter: blur(20px);
+  background: rgba(2, 2, 4, 0.5);
+  backdrop-filter: blur(30px);
   border-bottom: 1px solid var(--surface-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand {
@@ -92,12 +105,12 @@ body {
 .main-content {
   position: relative;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .hero-section {
   text-align: center;
-  padding: 6rem 1rem 4rem;
+  padding: 2rem 1rem 1rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -115,26 +128,26 @@ body {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.04em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   background: linear-gradient(to right, #fff, #a1a1aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--secondary-text);
   line-height: 1.6;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* Poll Section */
 .poll-section {
-  padding: 6rem 1rem 4rem;
+  padding: 1rem 1rem 2rem;
   display: flex;
   justify-content: center;
   scroll-margin-top: 80px;
@@ -143,16 +156,16 @@ body {
 .poll-container {
   width: 100%;
   max-width: 720px;
-  padding: 3rem;
-  background: var(--surface-color);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  padding: 2rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
   border: 1px solid var(--surface-border);
   border-radius: 32px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5), inset 0 1px 0 var(--surface-highlight);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 /* History Section */
@@ -186,15 +199,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem;
-  background: var(--surface-color);
+  background: linear-gradient(145deg, rgba(255,255,255,0.02), transparent);
   border: 1px solid var(--surface-border);
   border-radius: 16px;
-  transition: transform 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .history-item:hover {
-  transform: translateX(4px);
-  background: rgba(255,255,255,0.06);
+  transform: translateX(6px) scale(1.01);
+  background: rgba(255,255,255,0.05);
+  border-color: var(--surface-highlight);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .history-voter {
@@ -235,9 +250,9 @@ body {
 
 /* Common Components */
 .btn-connect {
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   color: var(--primary-text);
-  border: 1px solid var(--surface-border);
+  border: 1px solid var(--surface-highlight);
   padding: 0.6rem 1.2rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -247,11 +262,14 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .btn-connect:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.05);
 }
 
 .wallet-badge {
@@ -311,71 +329,7 @@ body {
 .val-yes { color: var(--yes-color); text-shadow: 0 0 20px var(--yes-glow); }
 .val-no { color: var(--no-color); text-shadow: 0 0 20px var(--no-glow); }
 
-@keyframes coinSlide {
-  from { background-position: 0 0; }
-  to { background-position: 12px 0; }
-}
 
-.poll-bar-container {
-  height: 36px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 9999px;
-  overflow: hidden;
-  display: flex;
-  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255,255,255,0.1);
-  position: relative;
-  padding: 2px;
-}
-
-.poll-bar-yes {
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    #FDE047 0px,
-    #FDE047 4px,
-    #EAB308 4px,
-    #EAB308 8px,
-    #A16207 8px,
-    #A16207 12px
-  );
-  border-radius: 9999px 0 0 9999px;
-  position: relative;
-  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: inset 0 -6px 10px rgba(0,0,0,0.5), 0 0 20px rgba(234, 179, 8, 0.4);
-  animation: coinSlide 1s linear infinite;
-}
-
-.poll-bar-no {
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    #E5E7EB 0px,
-    #E5E7EB 4px,
-    #9CA3AF 4px,
-    #9CA3AF 8px,
-    #4B5563 8px,
-    #4B5563 12px
-  );
-  border-radius: 0 9999px 9999px 0;
-  position: relative;
-  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: inset 0 -6px 10px rgba(0,0,0,0.5), 0 0 20px rgba(156, 163, 175, 0.4);
-  animation: coinSlide 1s linear infinite;
-}
-
-/* Glass tube highlight */
-.poll-bar-yes::before, .poll-bar-no::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  height: 40%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.1));
-  border-radius: 9999px;
-  pointer-events: none;
-}
 
 .actions {
   display: grid;
@@ -442,12 +396,22 @@ body {
     padding: 4rem 1rem 2rem;
   }
   .poll-container {
-    padding: 1.5rem;
-    gap: 1.5rem;
-    border-radius: 20px;
+    padding: 1.25rem;
+    gap: 1rem;
+    border-radius: 24px;
   }
   .actions {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .btn-vote {
+    height: 56px;
+    font-size: 1rem;
+    border-radius: 16px;
+  }
+  .pie-chart-wrapper {
+    transform: scale(0.85);
+    margin: -1rem 0 !important;
   }
   .history-header {
     flex-direction: column;
@@ -462,12 +426,28 @@ body {
   .history-choice {
     align-self: flex-start;
   }
+  .navbar {
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .nav-brand {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
   .nav-links {
-    display: none; /* Hide standard links on mobile to save space, assuming they aren't critical or we can just show the connect button */
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .btn-connect {
     padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
   .label-value {
     font-size: 2rem;
