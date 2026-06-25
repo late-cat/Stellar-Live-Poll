@@ -432,3 +432,49 @@ body {
 
 .icon-spin { animation: spin 1s linear infinite; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-section {
+    padding: 4rem 1rem 2rem;
+  }
+  .poll-container {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 20px;
+  }
+  .actions {
+    grid-template-columns: 1fr;
+  }
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .history-choice {
+    align-self: flex-start;
+  }
+  .nav-links {
+    display: none; /* Hide standard links on mobile to save space, assuming they aren't critical or we can just show the connect button */
+  }
+  .btn-connect {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  .label-value {
+    font-size: 2rem;
+  }
+  .toast {
+    bottom: 1rem;
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
